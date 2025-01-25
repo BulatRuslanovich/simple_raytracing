@@ -9,6 +9,7 @@ This project is a basic implementation of ray tracing in C. It demonstrates the 
 
 ## Demonstration
 Here is a GIF demonstrating the output of the ray tracing
+![Запись-экрана-от-2025-01-25-17-31-11](https://github.com/user-attachments/assets/f6d05b82-0d56-436c-8a27-3b9545119dfd)
 
 ## Getting Started
 
