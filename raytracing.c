@@ -1,6 +1,5 @@
 #include <SDL2/SDL.h>
 #include <math.h>
-#include <stdio.h>
 
 #define WIDTH 1800
 #define HEIGHT 800
