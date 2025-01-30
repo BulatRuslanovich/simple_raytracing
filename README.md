@@ -1,29 +1,75 @@
 # Simple Raytracing
 
-This project is a basic implementation of ray tracing in C. It demonstrates the fundamental concepts of ray tracing, such as ray-sphere intersection, shading, and rendering.
+Реализация интерактивного ray tracing с динамическими объектами и управлением. Проект демонстрирует основные концепции трассировки лучей в реальном времени с использованием SDL2.
 
-## Features
+#### Старая версия
+![Demo](https://github.com/user-attachments/assets/f6d05b82-0d56-436c-8a27-3b9545119dfd)
+#### Новая версия
 
-- Ray-sphere intersection
-- Basic shading
+## Особенности
 
-## Demonstration
-Here is a GIF demonstrating the output of the ray tracing
-![Запись-экрана-от-2025-01-25-17-31-11](https://github.com/user-attachments/assets/f6d05b82-0d56-436c-8a27-3b9545119dfd)
+- **Динамические лучи**: Генерация до 360 лучей в реальном времени
+- **Физика объектов**: Реалистичные столкновения сфер
+- **Визуальные эффекты**:
+  - Градиентное затенение
+  - Эффект свечения
+  - Аппаратно-ускоренный рендеринг
+- **Интерактивность**:
+  - Управление мышью
+  - Горячие клавиши
+  - Настройка параметров в реальном времени
+- **Оптимизации**:
+  - Кэширование текстур
+  - Предвычисление математических операций
 
-## Getting Started
+## Требования
 
-### Prerequisites
+- Компилятор C (GCC 9+ / Clang 12+)
+- CMake 3.10+
+- SDL2 2.0.20+
+- SDL2_gfx 1.0.4+
+- SDL2_ttf 2.0.18+
+- Шрифты Liberation Sans
 
-- A C compiler (e.g., GCC)
-- SDL2 Library
+## Установка
 
-### Building
+### Зависимости
 
-To build the project, run the following command:
+#### Fedora/RHEL:
 
-```sh
+```bash
+sudo dnf install SDL2-devel SDL2_gfx-devel SDL2_ttf-devel liberation-sans-fonts
+```
+#### Для Ubuntu/Debian:
+```bash
+sudo apt-get install libsdl2-dev libsdl2-gfx-dev libsdl2-ttf-dev fonts-liberation
+```
+#### Сборка и запуск
+```bash
+git clone https://github.com/BulatRuslanovich/simple_raytracing.git
 cd simple_raytracing
-gcc raytracing.c -o raytracing -lm -lSDL2
-./raytracing
+make run
+```
+
+## Управление
+
+### Основные клавиши
+
+| Комбинация          | Действие                              |
+|---------------------|---------------------------------------|
+| `ЛКМ + Перемещение` | Перетаскивание источника лучей        |
+| `+`/`-`             | Добавить/удалить сферу                |
+| `R`                 | Сбросить все объекты в случайные позиции |
+| `SPACE`             | Пауза/возобновление симуляции         |
+| `F`                 | Переключение отображения FPS          |
+| `H`                 | Показать/скрыть панель помощи         |
+| `ESC`               | Выход из программы                    |
+
+### Структура проекта
+```bash
+.
+├── CMakeLists.txt
+├── Makefile
+├── raytracing.c
+└── README.md
 ```
