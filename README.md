@@ -5,6 +5,7 @@
 #### Старая версия
 ![Demo](https://github.com/user-attachments/assets/f6d05b82-0d56-436c-8a27-3b9545119dfd)
 #### Новая версия
+![Запись экрана от 2025-01-30 05-11-00](https://github.com/user-attachments/assets/11d3763b-48f4-444c-8870-5b950eb19769)
 
 ## Особенности
 
