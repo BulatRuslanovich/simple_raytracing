@@ -47,6 +47,8 @@ run-nvidia: build
 
 run-amd: build
 	@DRI_PRIME=1 ./$(BUILD_DIR)/$(PROJECT_NAME)
+run-process:
+	./$(BUILD_DIR)/$(PROJECT_NAME)
 
 help:
 	@echo "Available targets:"

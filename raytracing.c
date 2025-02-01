@@ -363,6 +363,8 @@ int main() {
                         for (int i = 0; i < app_state.obstacle_count; ++i)
                             obstacle_init(&obstacles[i]);
                         break;
+                    default:
+                        break;
                 }
             }
             else if (event.type == SDL_MOUSEMOTION && event.motion.state) {
@@ -398,12 +400,16 @@ int main() {
         if (app_state.show_fps) {
             draw_text(fps_text, 10, 10);
         }
+
         if (app_state.show_help) {
             draw_text("[+/-] Change obstacles count", 10, 40);
             draw_text("[R] Reset obstacles", 10, 70);
             draw_text("[SPACE] Pause simulation", 10, 100);
             draw_text("[F] Toggle FPS", 10, 130);
             draw_text("[H] Toggle help", 10, 160);
+            if (app_state.is_paused) {
+                draw_text("PAUSED", SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
+            }
         }
 
         // Обновление состояния
